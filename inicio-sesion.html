@@ -1,48 +1,75 @@
 <!DOCTYPE html>
 <html lang='es'>
+
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Inicio de Sesion</title>
     <link rel='stylesheet' href=''>
 </head>
+
 <body>
     <!--Logo Agrogest en Header-->
     <header>
-        <div>
-       <img src="AGROGEST-IMAGENES/LOGO.jpg" alt="Logo AgroGest" width="100" height="100">
-       <h2>AgroGest</h2>
-       <h3>Distribuciones</h3>
-       </div> 
+        <div class="logo-header">
+            <img src="AGROGEST-IMAGENES/LOGO.jpg" alt="Logo AgroGest" width="100" height="100">
+            <h2>AgroGest</h2>
+            <h3>Distribuciones</h3>
+        </div>
     </header>
     <!--Main principal de inicio de sesion 
         formulario email,contraseña, checbox recordar
         boton recordar contraseña-->
     <main>
-        <form action="#" method="get">
-                <legend>Bienvenido de Nuevo</legend>
-                <p>Inicia sesion para acceder a tu portal AgroGest</p>
-
-                <label for="email">Correo Electronico:</label>
-                <input type="text" id="email" nombre="email" placeholder="ingresa tu correo electronico">
-                <br><br>
-                <label for="contraseña">Contraseña:</label>
-                <input type="text" id="contraseña" nombre="contraseña" placeholder="ingresa tu contraseña">
-                <br>
-                <label for="recordar">recordarme:</label>
-                <input type="checkbox" id="recordar" nombre="recordar">
-
-                <button> <a href="recupera-tu-acceso.html"></a>¿Olvidaste tu contraseña?</button>
-                <br>
-                <button type="submit">Iniciar Sesión</button>
-                <p>---------o-----------</p>
-                <button>Ingrese sin Cuenta (Ver Catalogo)</button>
-                <p>utilizamos medidas de seguridad para proteger tus datos</p>
-                <strong>Tu informacion esta protegida</strong>
-        </form>
         <div>
-        <img src="AGROGEST-IMAGENES/IMAGEN CENTRAL INICIO SESION DORADO.png" alt="Inicio sesion dorado" width="500" height="500">
-        
+        <form action="#" method="get">
+            <h1>bienvenido de Nuevo</h1>
+            <p>Inicia sesion para acceder a tu portal AgroGest</p>
+
+            <label for="email">Correo Electronico:</label>
+            <input type="text" id="email" name="email" placeholder="ingresa tu correo electronico">
+            <br><br>
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" id="contraseña" name="contraseña" placeholder="ingresa tu contraseña">
+            <br>
+            <label for="recordar">
+                <input type="checkbox" id="recordar" name="recordar"> Recordarme
+            </label>
+
+            <a href="recupera-tu-acceso.html"></a>¿Olvidaste tu contraseña?
+            <br>
+            <button type="submit">Iniciar Sesión</button>
+           <div class="separator"><span>o</span></div>
+            <button type="button">Ingrese sin Cuenta (Ver Catalogo)</button>
+            
+            
+        </form>
+    </div>
+        <p>utilizamos medidas de seguridad para proteger tus datos</p>
+            <strong>Tu informacion esta protegida</strong>
+            <!--imagen refencia de color dorado con iconos de Gestion, Seguridad e Informes-->
+        <div>
+            <img src="AGROGEST-IMAGENES/IMAGEN CENTRAL INICIO SESION DORADO.png" alt="Inicio sesion dorado" width="500"
+                height="500">
+        </div>
+        <div>
+            <img src="" alt="hoja" width="100" height="100">
+            <p>Gestion eficiente</p>
+            <p>Administra tu inventario, ventas y pedidos</p>
+
+            <img src="" alt="escudo" width="100" height="100">
+            <p>Seguro confiable</p>
+            <p>protegemos tu informacion y la de tu negocio</p>
+            
+            <img src="" alt="red" width="100" height="100">
+            <p>Informes en tiempo real</p>
+            <p>toma decisiones con datos actualizados</p>
         </div>
     </main>
+    <!--Footer con derechos de autor y mensaje de proyecto academico-->
+    <footer>
+        <p>Dessarrollado como proyecto de formación SNEA-Servicio Nacional De Aprendizaje, Programa Tecnologo en Analis y Desarrollo de Software(ADSO)</p>
+        <p>&copy; 2026 AgroGest Distribuciones. Todos los derechos reservados.</p>
+        <p>Proyecto desarrollado con fines academicos</p>
+    </footer>
 </body>

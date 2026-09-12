@@ -7,8 +7,90 @@
 </head>
 
 <body>
+    <header>
+        <img src="AGROGEST-IMAGENES/LOGO.jpg" alt="logoAgroGest" width="50px">
+        <h1>AgroGest</h1>
 
-    <h1>Verificación de Código</h1>
+    </header>
+    <main>
+        <section>
+            <img 
+            src="AGROGEST-IMAGENES/IMAGEN CENTRAL VERIFICACION DE CODIGO.png" 
+            alt="imagen codigo de verificacion"
+            width="600px">
+        </section>
+        <section>
+            <h1>Verificacion de Codigo</h1>
+            <p>
+                Hemos enviado un codigo de 4 digitos a tu correo:
+            </p>
+            <p>
+                ej****@gmail.com
+            </p>
 
+            <div>
+                
+                <!---
+                type="text" genera un campo donde el usuario va poder escribir
+                maxlength="1" con el designamos que el usuario solo podra escribir un digito
+                inputmode="numeric" indica al navegador que ese campo va arecibir numeros
+                aria-label="primer digito">da una descripcion en le espacio donde el usuario va a escribir para guiarlo
+                -->
+                <input 
+                type="text" 
+                maxlength="1"
+                inputmode="numeric"
+                aria-label="primer digito">
+
+                <input 
+                type="text" 
+                maxlength="1"
+                inputmode="numeric"
+                aria-label="segundo digito">
+
+                <input 
+                type="text" 
+                maxlength="1"
+                inputmode="numeric"
+                aria-label="tercer digito">
+
+                <input 
+                type="text" 
+                maxlength="1"
+                inputmode="numeric"
+                aria-label="cuarto digito">
+            </div>
+            <button type="button">
+                verificacion e iniciar sesion
+            </button>
+            <p>
+                ¿No recibiste el codigo?
+                <a href="#">reenviar codigo</a>
+            </p>
+            <a href="#"><!---Agregamos links que nos van a dirreccionar-->
+                volver a la recuperacion
+            </a>
+        </section>
+    </main>
+<section>
+    <p>
+        <strong>tu informacion esta protegida </strong>
+    </p>  
+    <p>
+        Utilizamos medidas de seguridad para proteges tus datos
+    </p>  
+</section>
+<footer>
+    <p>Desarrollado como proyecto de formacion del SENA -
+        Servicio Nacional de Aprendizaje, programa tecnologo
+        en Analisis y Desarrollo de software (ADSo).
+    </p>
+    <p>
+        © 2026 AgroGest Distribuciones. Todos los derechos reservados.
+    </p>
+    <p>
+        proyecto desarrrollado con fines academicos
+    </p>
+</footer>
 </body>
 </html>

@@ -1,0 +1,147 @@
+/*Variables*/
+/*Variables creadas paa reutilizar codigo y usar en la web*/
+:root{
+    --color-fondo: #FAFAFA;
+    --color-primario: #FFFFFF;
+    --color-acento: #CA8A04;
+    --color-texto: #333333;
+    --color-texto-suave: #666666;
+}
+/*Estilos Generales*/
+/*Color de fondo y fuente a llevar*/
+body{
+    background-color: var(--color-fondo);
+    font-family: Arial, Helvetica, sans-serif ;
+    display: flex;
+    flex-direction: column;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*Encabezado y Navegacion*/
+
+/*Contenido Principal*/
+main{
+    flex: 1; /*Empuja el footer para abajo*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.tarjeta{
+    display: flex;
+    background-color: var(--color-primario);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+}
+.tarjeta-imagen{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primario);
+}
+.tarjeta-imagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*Columna derecha: contenido*/
+.tarjeta-contenido{
+    flex: 1;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.tarjeta-contenido h2{
+    color: var(--color-acento);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.descripcion{
+    color: var(--color-texto-suave);
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+/*Formulario*/
+
+form label{
+    display: block;
+    color:var(--color-acento);
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+form input[type="email"]{
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    outline: none;
+}
+form input[type="email"]:focus{
+    border-color: var(--color-acento);
+
+}
+.recordar{
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+.recordar a{
+    color: var(--color-acento);
+    text-decoration: none;
+    font-weight: bold;
+}
+.recordar a:hover{
+    text-decoration: underline;
+}
+/*Boton Principal*/
+.btn-primario{
+    width: 100%;
+    padding:14px;
+    background-color: var(--color-acento);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btn-primario:hover{
+    background-color: #A16E03;/*Un tono un tris mas oscuro al pasar el mouse*/
+}
+/*Mensaje de seguridad*/
+.seguridad{
+    margin-top: 50px;
+    width: 100%;
+    max-width: 900px; /*mismo ancho que la tarjeta*/
+    text-align: left; /*alinea el texto a la izquierda*/
+    font-size: 14px;
+    color: var(--color-texto-suave);
+}
+strong{
+    color: #000000;
+}
+/*Footer*/
+footer{
+    background-color: var(--color-acento);
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 12px;
+    line-height: 1.6;
+}
+footer p{
+    margin: 5px;
+}

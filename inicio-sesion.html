@@ -1,75 +1,100 @@
 <!DOCTYPE html>
 <html lang='es'>
-
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>Inicio de Sesion</title>
-    <link rel='stylesheet' href=''>
+    <title>Inicio de Sesión - AgroGest</title>
+    <link rel='stylesheet' href='CSS/InicioSesion.css'>
 </head>
 
 <body>
-    <!--Logo Agrogest en Header-->
+    <!-- Logo Agrogest en Header -->
     <header>
         <div class="logo-header">
-            <img src="AGROGEST-IMAGENES/LOGO.jpg" alt="Logo AgroGest" width="100" height="100">
+            <!-- Asegúrate de que la ruta de la imagen sea correcta -->
+            <img src="AGROGEST-IMAGENES/LOGO.jpg" alt="Logo AgroGest" width="90" height="90">
+        </div>
+        <div class="titulo-logo">
             <h2>AgroGest</h2>
             <h3>Distribuciones</h3>
         </div>
     </header>
-    <!--Main principal de inicio de sesion 
-        formulario email,contraseña, checbox recordar
-        boton recordar contraseña-->
-    <main>
-        <div>
-        <form action="#" method="get">
-            <h1>bienvenido de Nuevo</h1>
-            <p>Inicia sesion para acceder a tu portal AgroGest</p>
 
-            <label for="email">Correo Electronico:</label>
-            <input type="text" id="email" name="email" placeholder="ingresa tu correo electronico">
-            <br><br>
-            <label for="contraseña">Contraseña:</label>
-            <input type="password" id="contraseña" name="contraseña" placeholder="ingresa tu contraseña">
-            <br>
-            <label for="recordar">
-                <input type="checkbox" id="recordar" name="recordar"> Recordarme
-            </label>
+    <!-- Main principal de inicio de sesión -->
+    <main class="main-container">
+        <!-- Columna Izquierda: Formulario -->
+        <div class="columna-izquierda">
+            <div class="contenedor-formulario">
+                <h1>Bienvenido de nuevo</h1>
+                <p class="subtitulo">Inicia sesión para acceder al portal AgroGest.</p>
 
-            <a href="recupera-tu-acceso.html"></a>¿Olvidaste tu contraseña?
-            <br>
-            <button type="submit">Iniciar Sesión</button>
-           <div class="separator"><span>o</span></div>
-            <button type="button">Ingrese sin Cuenta (Ver Catalogo)</button>
-            
-            
-        </form>
-    </div>
-        <p>utilizamos medidas de seguridad para proteger tus datos</p>
-            <strong>Tu informacion esta protegida</strong>
-            <!--imagen refencia de color dorado con iconos de Gestion, Seguridad e Informes-->
-        <div>
-            <img src="AGROGEST-IMAGENES/IMAGEN CENTRAL INICIO SESION DORADO.png" alt="Inicio sesion dorado" width="500"
-                height="500">
+                <form action="#" method="get">
+                    <div class="grupo-input">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+                    </div>
+
+                    <div class="grupo-input">
+                        <label for="contraseña">Contraseña</label>
+                        <input type="password" id="contraseña" name="contraseña" placeholder="Ingresa tu contraseña" required>
+                    </div>
+
+                    <div class="opciones-formulario">
+                        <label for="recordar" class="label-checkbox">
+                            <input type="checkbox" id="recordar" name="recordar"> Recordarme
+                        </label>
+                        <a href="recupera-tu-acceso.html" class="link-olvido">¿Olvidaste tu contraseña?</a>
+                    </div>
+
+                    <button type="submit" class="btn-primario">Iniciar Sesión</button>
+                    
+                    <div class="separator"><span>o</span></div>
+                    
+                    <button type="button" class="btn-secundario">Ingresar sin Cuenta (Ver Catálogo)</button>
+                </form>
+            </div>
+
+            <div class="info-seguridad">
+                <p>Utilizamos medidas de seguridad para proteger tus datos.</p>
+                <strong>Tu información está protegida</strong>
+            </div>
         </div>
-        <div>
-            <img src="" alt="hoja" width="100" height="100">
-            <p>Gestion eficiente</p>
-            <p>Administra tu inventario, ventas y pedidos</p>
 
-            <img src="" alt="escudo" width="100" height="100">
-            <p>Seguro confiable</p>
-            <p>protegemos tu informacion y la de tu negocio</p>
-            
-            <img src="" alt="red" width="100" height="100">
-            <p>Informes en tiempo real</p>
-            <p>toma decisiones con datos actualizados</p>
+        <!-- Columna Derecha: Imagen e Iconos -->
+        <div class="columna-derecha">
+            <div class="imagen-central">
+                <!-- Reemplaza con la ruta correcta de tu imagen central -->
+                <img src="AGROGEST-IMAGENES/IMAGEN CENTRAL INICIO SESION DORADO.png" alt="Ilustración AgroGest" class="img-ilustracion">
+            </div>
+
+            <div class="iconos-informativos">
+                <div class="icono-item">
+                    <img src="AGROGEST-IMAGENES/icono-hoja.png" alt="Gestión eficiente" class="icono-img">
+                    <p class="icono-titulo">Gestión eficiente</p>
+                    <p class="icono-desc">Administra tu inventario, ventas y pedidos.</p>
+                </div>
+                <div class="icono-item">
+                    <img src="AGROGEST-IMAGENES/icono-escudo.png" alt="Seguro y confiable" class="icono-img">
+                    <p class="icono-titulo">Seguro y confiable</p>
+                    <p class="icono-desc">Protegemos tu información y la de tu negocio.</p>
+                </div>
+                <div class="icono-item">
+                    <img src="AGROGEST-IMAGENES/icono-red.png" alt="Informes en tiempo real" class="icono-img">
+                    <p class="icono-titulo">Informes en tiempo real</p>
+                    <p class="icono-desc">Toma decisiones con datos actualizados.</p>
+                </div>
+            </div>
         </div>
     </main>
-    <!--Footer con derechos de autor y mensaje de proyecto academico-->
+
+    <!-- Barra decorativa inferior (como en la imagen) -->
+    <div class="barra-inferior"></div>
+
+    <!-- Footer -->
     <footer>
-        <p>Dessarrollado como proyecto de formación SNEA-Servicio Nacional De Aprendizaje, Programa Tecnologo en Analis y Desarrollo de Software(ADSO)</p>
+        <p>Desarrollado como proyecto de formación SENA - Servicio Nacional de Aprendizaje, Programa Tecnólogo en Análisis y Desarrollo de Software (ADSO).</p>
         <p>&copy; 2026 AgroGest Distribuciones. Todos los derechos reservados.</p>
-        <p>Proyecto desarrollado con fines academicos</p>
+        <p>Proyecto desarrollado con fines académicos.</p>
     </footer>
 </body>
+</html>

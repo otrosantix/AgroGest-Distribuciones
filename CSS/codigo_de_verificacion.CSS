@@ -1,0 +1,354 @@
+* {
+    /*este es un selector universal con el que designamos que estas reglas se aplican a todos los elementos HTML*/
+    margin: 0;
+    /*eliminamos los margenes que el navegador coloca automaticamente en los elementos*/
+    padding: 0;
+    /*eliminamos el espacio interno predeterminado que tienen algunos elementos*/
+    box-sizing: border-box;
+    /*con esto hacemos que el width y el height incluyan el contenido, el padding y el border*/
+}
+body {
+    font-family: Arial, sans-serif;
+    /*con esto definimos la fuente que vamos a utilizar y si Arial no esta disponible pasaria a la siguiente fuente que seria sans-serif*/
+    background-color: #ffffff;
+    /*con esto colocamos el color blanco como fondo de toda la pagina*/
+    color: #222;
+    /*con esto definimos el color de texto general de la pagina*/
+}
+header {
+    width: 760px;
+    /*nuestro encabezado tendra un ancho de 760px*/
+    height: 120px;
+    /*nuestro encabezado tendra una altura de 120px*/
+    margin: 0 auto;
+    /*con esto el navegador calcula automaticamente los margenes izquierdo y derecho para centrar el encabezado*/
+    display: flex;
+    /*con esto convertimos el encabezado en un contenedor flexbox para organizar mejor los elementos que estan dentro*/
+    align-items: center;
+    /*con esto centramos los elementos verticalmente dentro del encabezado*/
+    padding: 20px 0;
+    /*con esto dejamos 20px de espacio arriba y abajo y 0px a los lados*/
+    background-color: white;
+    /*con esto colocamos el color blanco como fondo del encabezado*/
+}
+header img {
+    width: 135px;
+    /*con esto definimos que la imagen del encabezado tendra un ancho de 135px*/
+    height: auto;
+    /*con esto hacemos que la altura se ajuste automaticamente para mantener las proporciones de la imagen*/
+    object-fit: contain;
+    /*con esto indicamos que la imagen debe conservar sus proporciones y tratar de encajar dentro del espacio disponible*/
+}
+main {
+    width: 760px;
+    /*la tarjeta principal tendra un ancho de 760px*/
+    height: 400px;
+    /*la tarjeta principal tendra una altura de 400px*/
+    margin: 0 auto;
+    /*con esto centramos la tarjeta horizontalmente en la pagina*/
+    display: flex;
+    /*con esto convertimos el main en un contenedor flexbox para poder organizar sus elementos en bloques*/
+    background-color: white;
+    /*colocamos el fondo de la tarjeta en color blanco*/
+    border-radius: 0 18px 18px 18px;
+    /*redondeamos las esquinas, dejando sin redondear la esquina superior izquierda*/
+    box-shadow: 7px 8px 12px rgba(0, 0, 0, 0.20);
+    /*con esto creamos una sombra alrededor de la tarjeta para darle un efecto de profundidad*/
+    overflow: hidden;
+    /*se encarga de ocultar cualquier contenido que se salga de los limites del main y tambien ayuda a que la imagen respete las esquinas redondeadas*/
+}
+main section:first-child {
+    /*con esto seleccionamos el primer section que se encuentra directamente dentro del main, que en este caso contiene la imagen*/
+    width: 320px;
+    /*el primer bloque, donde esta la imagen, tendra un ancho de 320px*/
+    height: 400px;
+    /*el bloque de la imagen tendra una altura de 400px*/
+    display: flex;
+    /*con esto convertimos este section en un contenedor flexbox para organizar su contenido*/
+    justify-content: center;
+    /*con esto centramos el contenido horizontalmente dentro del section*/
+    align-items: center;
+    /*con esto centramos el contenido verticalmente dentro del section*/
+    overflow: hidden;
+    /*evitamos que el contenido de este section se salga de sus limites*/
+    border-right: 1px solid #d28c00;
+    /*agregamos una linea vertical de color dorado en el lado derecho de la imagen para marcar la division entre los dos bloques*/
+}
+main section:first-child img {
+    /*buscamos la imagen que esta dentro del primer section del main*/
+    width: 100%;
+    /*la imagen ocupara el 100% del ancho disponible dentro de su contenedor*/
+    height: 100%;
+    /*la imagen ocupara el 100% de la altura disponible dentro de su contenedor*/
+    object-fit: cover;
+    /*con esto hacemos que la imagen cubra completamente el contenedor manteniendo sus proporciones, aunque puede recortar una parte de la imagen*/
+}
+main section:last-child {
+    /*con last-child seleccionamos el ultimo section que se encuentra dentro del main, que en este caso contiene el formulario*/
+    width: 440px;
+    /*el bloque del formulario tendra un ancho de 440px*/
+    height: 400px;
+    /*el bloque del formulario tendra una altura de 400px*/
+    padding: 65px 45px 30px;
+    /*dejamos 65px de espacio arriba, 45px a los lados y 30px abajo dentro del formulario*/
+    background-color: white;
+    /*colocamos el fondo del formulario en color blanco*/
+    text-align: center;
+    /*centramos horizontalmente los textos que se encuentran dentro del formulario*/
+}
+main section:last-child h1 {
+    /*seleccionamos el h1 que se encuentra dentro del ultimo section del main*/
+    font-size: 28px;
+    /*definimos que el tamaño del titulo sera de 28px*/
+    margin-bottom: 10px;
+    /*dejamos 10px de espacio debajo del titulo*/
+    color: #d28c00;
+    /*colocamos el texto del titulo en color dorado*/
+}
+main section:last-child p {
+    /*seleccionamos los parrafos que se encuentran dentro del ultimo section del main*/
+    font-size: 13px;
+    /*definimos que el tamaño de los parrafos sera de 13px*/
+    line-height: 1.5;
+    /*definimos el espacio vertical entre cada linea del parrafo*/
+    color: #444;
+    /*colocamos los parrafos en un color gris oscuro*/
+    margin-bottom: 5px;
+    /*dejamos 5px de espacio debajo de cada parrafo*/
+}
+main section:last-child>div {
+    /*con el signo > seleccionamos solamente el div que es hijo directo del ultimo section del main*/
+    display: flex;
+    /*colocamos los inputs dentro de un contenedor flexbox para poder organizarlos*/
+    justify-content: center;
+    /*centramos los inputs horizontalmente dentro del div*/
+    gap: 25px;
+    /*dejamos 25px de separacion entre cada input*/
+    margin: 28px 0 30px;
+    /*dejamos 28px de espacio arriba, 0px a los lados y 30px abajo*/
+}
+main section:last-child input {
+    /*seleccionamos los campos input que estan dentro del formulario*/
+    width: 50px;
+    /*cada campo para colocar el codigo tendra un ancho de 50px*/
+    height: 55px;
+    /*cada campo tendra una altura de 55px*/
+    text-align: center;
+    /*centramos el numero o caracter que escribamos dentro del input*/
+    font-size: 24px;
+    /*definimos que el tamaño del numero sera de 24px*/
+    font-weight: bold;
+    /*hacemos que el numero aparezca en negrita*/
+    border: 1px solid #dddddd;
+    /*agregamos un borde de 1px de color gris claro alrededor del input*/
+    border-radius: 7px;
+    /*redondeamos las esquinas de cada input*/
+    outline: none;
+    /*eliminamos el borde de resaltado que algunos navegadores colocan cuando seleccionamos el input*/
+}
+main section:last-child input:focus {
+    /*con :focus seleccionamos el input cuando el usuario hace clic sobre el o empieza a escribir en el*/
+    border: 2px solid #d28c00;
+    /*cuando el input esta seleccionado cambiamos su borde a uno de 2px de color dorado*/
+}
+main section:last-child button {
+    /*seleccionamos el boton que esta dentro del formulario*/
+    width: 100%;
+    /*el boton ocupara el 100% del ancho disponible de su contenedor*/
+    height: 48px;
+    /*el boton tendra una altura de 48px*/
+    padding: 10px;
+    /*dejamos 10px de espacio interno dentro del boton*/
+    border: none;
+    /*eliminamos el borde predeterminado del boton*/
+    border-radius: 7px;
+    /*redondeamos las esquinas del boton*/
+    background-color: #d28c00;
+    /*colocamos el fondo del boton en color dorado*/
+    color: white;
+    /*colocamos el texto del boton en color blanco*/
+    font-size: 14px;
+    /*definimos el tamaño del texto del boton en 14px*/
+    font-weight: bold;
+    /*hacemos que el texto del boton aparezca en negrita*/
+    cursor: pointer;
+    /*hacemos que el cursor cambie a una mano cuando pasemos sobre el boton*/
+    transition: 0.3s;
+    /*hacemos que los cambios visuales del boton tengan una transicion de 0.3 segundos*/
+}
+main section:last-child button:hover {
+    /*con :hover seleccionamos el boton cuando colocamos el cursor encima de el*/
+    background-color: #b97800;
+    /*cambiamos el color del boton a un dorado mas oscuro cuando pasamos el cursor*/
+}
+main section:last-child a {
+    /*seleccionamos los enlaces que estan dentro del ultimo section del main*/
+    color: #d28c00;
+    /*colocamos los enlaces en color dorado*/
+    font-size: 12px;
+    /*definimos el tamaño del texto de los enlaces en 12px*/
+    font-weight: bold;
+    /*hacemos que el texto de los enlaces aparezca en negrita*/
+    text-decoration: none;
+    /*quitamos la linea que normalmente aparece debajo de los enlaces*/
+}
+main section:last-child a:hover {
+    /*seleccionamos el enlace cuando colocamos el cursor encima de el*/
+    text-decoration: underline;
+    /*hacemos que aparezca nuevamente la linea debajo del enlace cuando pasamos el cursor*/
+}
+body>section {
+    /*con > seleccionamos solamente el section que es hijo directo del body*/
+    width: 760px;
+    /*el aviso de seguridad tendra un ancho de 760px*/
+    margin: 35px auto 0;
+    /*dejamos 35px de espacio arriba, centramos a los lados y dejamos 0px abajo*/
+    padding: 0;
+    /*eliminamos cualquier espacio interno del section*/
+    text-align: left;
+    /*hacemos que el texto quede alineado hacia la izquierda*/
+    background-color: white;
+    /*colocamos el fondo del aviso en color blanco*/
+}
+body>section strong {
+    /*seleccionamos el texto que esta dentro de la etiqueta strong del aviso*/
+    color: #444;
+    /*colocamos el texto en gris oscuro*/
+    font-size: 13px;
+    /*definimos el tamaño del texto en 13px*/
+}
+body>section p {
+    /*seleccionamos los parrafos que estan dentro del aviso de seguridad*/
+    margin-bottom: 5px;
+    /*dejamos 5px de espacio debajo de cada parrafo*/
+    color: #777;
+    /*colocamos los parrafos en un color gris*/
+    font-size: 11px;
+    /*definimos el tamaño de los parrafos en 11px*/
+}
+footer {
+    /*seleccionamos el pie de pagina de nuestra interfaz*/
+    width: 100%;
+    /*hacemos que el footer ocupe el 100% del ancho disponible de la pagina*/
+    min-height: 120px;
+    /*definimos una altura minima de 120px para el footer*/
+    margin-top: 70px;
+    /*dejamos 70px de espacio entre el contenido anterior y el footer*/
+    background-color: #d28c00;
+    /*colocamos el fondo del footer en color dorado*/
+    color: white;
+    /*colocamos el texto del footer en color blanco*/
+    text-align: center;
+    /*centramos horizontalmente el texto del footer*/
+    padding: 30px 20px;
+    /*dejamos 30px de espacio arriba y abajo y 20px a los lados*/
+    font-size: 11px;
+    /*definimos el tamaño general del texto del footer en 11px*/
+    line-height: 1.6;
+    /*dejamos un poco mas de espacio entre las lineas del texto*/
+}
+footer p {
+    /*seleccionamos los parrafos que estan dentro del footer*/
+    margin-bottom: 5px;
+    /*dejamos 5px de espacio debajo de cada parrafo*/
+}
+@media (max-width: 800px) {
+    /*con @media hacemos que estas reglas se apliquen cuando la pantalla tenga un ancho maximo de 800px, como tablets o pantallas pequeñas*/
+    header {
+        width: 90%;
+        /*el encabezado ocupara el 90% del ancho disponible*/
+        height: 100px;
+        /*reducimos la altura del encabezado a 100px*/
+    }
+    header img {
+        width: 120px;
+        /*reducimos el ancho del logo a 120px para adaptarlo a pantallas pequeñas*/
+    }
+    main {
+        width: 90%;
+        /*la tarjeta ocupara el 90% del ancho disponible*/
+        height: auto;
+        /*permitimos que la altura se ajuste automaticamente dependiendo del contenido*/
+        flex-direction: column;
+        /*cambiamos la direccion de los bloques y ahora se colocan uno debajo del otro*/
+    }
+    main section:first-child {
+        width: 100%;
+        /*el bloque de la imagen ocupara todo el ancho disponible*/
+        height: 300px;
+        /*la imagen tendra una altura de 300px*/
+        border-right: none;
+        /*eliminamos la linea vertical porque los bloques ya no estan uno al lado del otro*/
+        border-bottom: 1px solid #dddddd;
+        /*agregamos una linea horizontal para separar la imagen del formulario*/
+    }
+    main section:last-child {
+        width: 100%;
+        /*el formulario ocupara todo el ancho disponible*/
+        height: auto;
+        /*permitimos que la altura se ajuste automaticamente*/
+        padding: 50px 35px;
+        /*dejamos 50px de espacio arriba y abajo y 35px a los lados*/
+    }
+    body>section {
+        width: 90%;
+        /*el aviso de seguridad ocupara el 90% del ancho disponible*/
+    }
+    footer {
+        margin-top: 50px;
+        /*reducimos el espacio superior del footer a 50px en pantallas pequeñas*/
+    }
+}
+@media (max-width: 500px) {
+    /*con este media query hacemos ajustes adicionales para celulares con un ancho maximo de 500px*/
+    header {
+        height: 85px;
+        /*reducimos la altura del encabezado a 85px*/
+    }
+    header img {
+        width: 105px;
+        /*reducimos el logo a 105px para que ocupe menos espacio en el celular*/
+    }
+    main {
+        width: 94%;
+        /*la tarjeta ocupara el 94% del ancho disponible del celular*/
+    }
+    main section:first-child {
+        height: 230px;
+        /*reducimos la altura de la imagen a 230px*/
+    }
+    main section:last-child {
+        padding: 35px 20px;
+        /*reducimos el espacio interno del formulario a 35px arriba y abajo y 20px a los lados*/
+    }
+    main section:last-child h1 {
+        font-size: 22px;
+        /*reducimos el tamaño del titulo a 22px para que se adapte mejor al celular*/
+    }
+    main section:last-child>div {
+        gap: 12px;
+        /*reducimos la separacion entre los inputs a 12px para que puedan entrar en la pantalla*/
+    }
+    main section:last-child input {
+        width: 45px;
+        /*reducimos el ancho de cada input a 45px*/
+        height: 50px;
+        /*reducimos la altura de cada input a 50px*/
+    }
+    main section:last-child button {
+        height: 45px;
+        /*reducimos la altura del boton a 45px*/
+        font-size: 12px;
+        /*reducimos el tamaño del texto del boton a 12px*/
+    }
+    body>section {
+        width: 94%;
+        /*el aviso de seguridad ocupara el 94% del ancho del celular*/
+    }
+    footer {
+        font-size: 9px;
+        /*reducimos el tamaño del texto del footer a 9px*/
+        padding: 25px 15px;
+        /*dejamos 25px de espacio arriba y abajo y 15px a los lados*/
+    }
+}

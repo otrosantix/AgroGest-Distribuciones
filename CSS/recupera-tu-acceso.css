@@ -1,0 +1,282 @@
+/*Variables*/
+/*Variables creadas paa reutilizar codigo y usar en la web*/
+:root{
+    --color-fondo: #FAFAFA;
+    --color-primario: #FFFFFF;
+    --color-acento: #CA8A04;
+    --color-texto: #333333;
+    --color-texto-suave: #666666;
+}
+/*Estilos Generales*/
+/*Color de fondo y fuente a llevar*/
+body{
+    background-color: var(--color-fondo);
+    font-family: Arial, Helvetica, sans-serif ;
+    display: flex;
+    flex-direction: column;
+}
+*{
+    box-sizing: border-box; /*box-sizing: border-box; en CSS hace que el relleno (padding) y el borde (border) de un elemento se incluyan dentro de su ancho (width) y alto (height) totales.*/
+    margin: 0;
+    padding: 0;
+}
+
+/*Encabezado y Navegacion*/
+/* header con el logo y el titulo de la empresa */
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    gap: 15px;
+}
+
+.logo-header img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain; /* para que la imagen no se deforme */
+    border-radius: 50%; /* por si el logo es cuadrado, lo redondea */
+}
+
+.titulo-logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2; /* para que el titulo y subtitulo no queden tan pegados */
+}
+
+.titulo-logo h2 {
+    color: var(--color-acento);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.titulo-logo h3 {
+    color: var(--color-acento);
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+/*Contenido Principal*/
+main{
+    flex: 1; /*Empuja el footer para abajo*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.tarjeta{
+    display: flex;
+    background-color: var(--color-primario);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+}
+.tarjeta:hover{
+    transform:  scale(1.01);
+    transition: 0.5s;
+}
+.tarjeta-imagen{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primario);
+}
+.tarjeta-imagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*Columna derecha: contenido*/
+.tarjeta-contenido{
+    flex: 1;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.tarjeta-contenido h2{
+    color: var(--color-acento);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.descripcion{
+    color: var(--color-texto-suave);
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/*Formulario*/
+
+form label{
+    display: block;
+    color:var(--color-acento);
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+form input[type="email"]{
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    outline: none;
+}
+form input[type="email"]:hover{ 
+    border-color: var(--color-acento);
+
+}
+form input[type="email"]:focus{
+    border-color: var(--color-acento);
+
+}
+
+.recordar{
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+.recordar a{
+    color: var(--color-acento);
+    text-decoration: none;
+    font-weight: bold;
+}
+.recordar a:hover{
+    text-decoration: underline;
+    color: #f7d84e;
+    
+}
+/*Boton Principal*/
+.btn-primario{
+    width: 100%;
+    padding:14px;
+    background-color: var(--color-acento);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btn-primario:hover{
+    background-color: #A16E03;/*Un tono un tris mas oscuro al pasar el mouse*/
+    transform:  scale(1.04);
+    transition: 0,6s;
+}
+/*Mensaje de seguridad*/
+.seguridad{
+    margin-top: 50px;
+    width: 100%;
+    max-width: 900px; /*mismo ancho que la tarjeta*/
+    text-align: left; /*alinea el texto a la izquierda*/
+    font-size: 14px;
+    color: var(--color-texto-suave);
+}
+strong{
+    color: #000000;
+}
+/*Footer*/
+footer{
+    background-color: var(--color-acento);
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 12px;
+    line-height: 1.6;
+}
+footer p{
+    margin: 5px;
+}
+/* ============================================
+   
+   Afecta: header, tarjeta, formulario, botón, footer
+   ============================================ */
+@media (max-width: 480px) {
+
+    /* Header: reduce aún más el padding y centra el contenido */
+    header {
+        padding: 12px 15px; /*crear un espacio libre entre el contenido de un elemento y su propio borde en el diseño web. [1] (https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/padding)*/
+        gap: 8px; /* Cambia el tamaño del texto en una pagina web*/
+    }
+
+    /* Logo: tamaño más pequeño para móviles */
+    .logo-header img {
+        width: 45px;
+        height: 45px;
+    }
+
+    /* Título: reduce tamaño para que quepa en una línea */
+    .titulo-logo h2 {
+        font-size: 1.2rem; /* 1 rem = 16px*/
+    }
+
+    /* Subtítulo: reduce tamaño */
+    .titulo-logo h3 {
+        font-size: 0.75rem; /* 1 rem = 16px*/
+    }
+
+    /* Main: reduce padding general */
+    main {
+        padding: 15px;
+    }
+
+    /* Tarjeta: bordes menos redondeados y ancho completo */
+    .tarjeta {
+        border-radius: 15px;
+    }
+
+    /* Imagen: reduce altura máxima en móviles */
+    .tarjeta-imagen img {
+        max-height: 150px;
+        padding: 10px;
+    }
+
+    /* Contenido: reduce padding para ganar espacio */
+    .tarjeta-contenido {
+        padding: 20px 18px;
+    }
+
+    /* Título del formulario: más pequeño */
+    .tarjeta-contenido h2 {
+        font-size: 20px;
+    }
+
+    /* Párrafo descriptivo: reduce tamaño */
+    .tarjeta-contenido p {
+        font-size: 13px;
+    }
+
+    /* Input de correo: reduce padding y tamaño de fuente */
+    form input[type="email"] {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    /* Botón principal: reduce padding y tamaño de fuente */
+    .btn-primario {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    /* Enlace "Iniciar sesión": reduce tamaño */
+    .recordar {
+        font-size: 12px;
+    }
+
+    /* Mensaje de seguridad: texto más pequeño y alineado */
+    .seguridad {
+        font-size: 12px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    /* Footer: reduce padding y tamaño de fuente */
+    footer {
+        padding: 20px 15px;
+        font-size: 11px;
+    }
+}

@@ -149,10 +149,14 @@ form input[type="email"]:focus{
     color: #f7d84e;
     
 }
-/*Boton Principal*/
-.btn-primario{
+/* Botón Principal */
+.btn-primario {
     width: 100%;
-    padding:14px;
+    height: 50px;
+    padding: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--color-acento);
     color: white;
     border: none;
@@ -161,6 +165,8 @@ form input[type="email"]:focus{
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
+    text-align: center;
+    text-decoration: none;
 }
 .btn-primario:hover{
     background-color: #A16E03;/*Un tono un tris mas oscuro al pasar el mouse*/

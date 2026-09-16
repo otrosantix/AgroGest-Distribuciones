@@ -1,0 +1,361 @@
+:root {
+    --negro: #0b0b0b; /* Define el color negro */
+    --dorado: #d89500; /* Define el color dorado */
+    --dorado-oscuro: #b87800; /* Define un dorado más oscuro */
+    --blanco: #ffffff; /* Define el color blanco */
+    --gris-fondo: #f7f7f7; /* Define un gris claro para fondos */
+    --gris-texto: #687282; /* Define el color del texto */
+    --gris-claro: #dddddd; /* Define un gris claro */
+}
+
+* {
+    box-sizing: border-box; /* Hace que el tamaño incluya bordes y padding */
+}
+
+html,
+body {
+    margin: 0; /* Elimina el margen exterior */
+    padding: 0; /* Elimina el espacio interior */
+    min-height: 100%; /* Ocupa como mínimo toda la altura */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Define la fuente */
+    background-color: var(--blanco); /* Coloca el fondo blanco */
+    color: var(--negro); /* Define el color general del texto */
+    min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Organiza los elementos verticalmente */
+}
+
+header {
+    height: 52px; /* Define la altura del encabezado */
+    background-color: var(--negro); /* Coloca el fondo negro */
+    display: flex; /* Activa Flexbox */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 0 28px; /* Agrega espacio a los lados */
+    position: relative; /* Permite posicionar elementos dentro */
+}
+
+.logo-header {
+    width: 48px; /* Define el ancho del contenedor */
+    height: 48px; /* Define la altura del contenedor */
+    display: flex; /* Activa Flexbox */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+}
+
+.logo-header img {
+    width: 45px; /* Define el ancho del logo */
+    height: 45px; /* Define la altura del logo */
+    object-fit: contain; /* Mantiene las proporciones de la imagen */
+}
+
+.titulo-logo {
+    margin-left: 8px; /* Separa el logo del nombre */
+    line-height: 1; /* Reduce el espacio entre líneas */
+}
+
+.titulo-logo h2 {
+    margin: 0; /* Elimina el margen del título */
+    color: var(--dorado); /* Coloca el texto en dorado */
+    font-size: 17px; /* Define el tamaño del texto */
+    font-weight: bold; /* Coloca el texto en negrita */
+}
+
+.titulo-logo h3 {
+    margin: 2px 0 0 0; /* Ajusta el margen superior */
+    color: var(--dorado); /* Coloca el texto en dorado */
+    font-size: 9px; /* Define el tamaño del texto */
+    text-transform: uppercase; /* Convierte el texto en mayúsculas */
+}
+
+header > div:nth-child(3) {
+    position: absolute; /* Permite mover el menú libremente */
+    left: 50%; /* Coloca el menú en el centro */
+    transform: translateX(-50%); /* Corrige el centrado */
+}
+
+nav {
+    display: flex; /* Organiza los enlaces con Flexbox */
+    align-items: center; /* Centra los enlaces verticalmente */
+    gap: 30px; /* Separa los enlaces */
+}
+
+nav a {
+    color: #d5d5d5; /* Define el color de los enlaces */
+    text-decoration: none; /* Quita el subrayado */
+    font-size: 12px; /* Define el tamaño de los enlaces */
+    transition: 0.3s; /* Hace suaves las animaciones */
+}
+
+nav a:first-child {
+    color: var(--dorado); /* Pinta Inicio de dorado */
+}
+
+nav a:hover {
+    color: var(--dorado); /* Cambia el enlace a dorado */
+    transform: translateY(-2px); /* Mueve el enlace ligeramente hacia arriba */
+}
+
+header > div:last-child {
+    margin-left: auto; /* Envía el botón hacia la derecha */
+}
+
+.boton-ini-sesion {
+    border: 1px solid var(--dorado); /* Crea un borde dorado */
+    border-radius: 20px; /* Redondea el botón */
+    padding: 6px 25px; /* Agrega espacio dentro del botón */
+    color: var(--dorado) !important; /* Coloca el texto en dorado */
+    font-size: 11px; /* Define el tamaño del texto */
+    transition: 0.3s; /* Suaviza la animación */
+}
+
+.boton-ini-sesion:hover {
+    background-color: var(--dorado); /* Coloca fondo dorado al pasar el mouse */
+    color: var(--negro) !important; /* Cambia el texto a negro */
+    transform: scale(1.05); /* Aumenta ligeramente el botón */
+}
+
+main {
+    flex: 1; /* Hace que main ocupe el espacio disponible */
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Organiza el contenido verticalmente */
+    background-color: var(--blanco); /* Coloca fondo blanco */
+}
+
+main > div:nth-child(1) {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 1100px; /* Limita el ancho máximo */
+    min-height: 450px; /* Define una altura mínima */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 85px 40px 55px 40px; /* Agrega espacio interno */
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Organiza el contenido verticalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+}
+
+main > div:nth-child(1) > p:first-child {
+    margin: 0 0 8px 0; /* Ajusta el margen del primer párrafo */
+    color: var(--dorado); /* Coloca el texto en dorado */
+    font-size: 10px; /* Define el tamaño del texto */
+    font-weight: bold; /* Coloca el texto en negrita */
+}
+
+main h1 {
+    margin: 0 0 20px 0; /* Separa el título del texto inferior */
+    color: var(--dorado); /* Coloca AgroGest en dorado */
+    font-size: 35px; /* Define el tamaño del título */
+    font-weight: bold; /* Coloca el título en negrita */
+    letter-spacing: -1px; /* Reduce ligeramente el espacio entre letras */
+}
+
+main h1 strong {
+    color: #131b2b; /* Coloca Bienvenido a en oscuro */
+}
+
+main > div:nth-child(1) > p:last-child {
+    width: 470px; /* Define el ancho del texto */
+    margin: 0; /* Elimina el margen */
+    color: var(--gris-texto); /* Coloca el texto en gris */
+    font-size: 13px; /* Define el tamaño del texto */
+    line-height: 1.65; /* Aumenta el espacio entre líneas */
+}
+
+main > div:nth-child(2) {
+    position: absolute; /* Permite colocar la imagen en una posición específica */
+    top: 110px; /* Separa la imagen desde arriba */
+    right: 7%; /* Separa la imagen del lado derecho */
+    width: 390px; /* Define el ancho del contenedor */
+    height: 300px; /* Define la altura del contenedor */
+    display: flex; /* Activa Flexbox */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+}
+
+main > div:nth-child(2) img {
+    width: 350px; /* Define el ancho de la imagen */
+    height: 280px; /* Define la altura de la imagen */
+    object-fit: contain; /* Mantiene las proporciones */
+    display: block; /* Hace que la imagen sea un bloque */
+    position: relative; /* Permite controlar su posición */
+    z-index: 1; /* Coloca la imagen encima del círculo */
+}
+
+main > div:nth-child(2)::before {
+    content: ""; /* Crea un elemento decorativo */
+    position: absolute; /* Permite posicionarlo */
+    left: 5px; /* Coloca el círculo hacia la izquierda */
+    top: 105px; /* Coloca el círculo verticalmente */
+    width: 76px; /* Define el ancho del círculo */
+    height: 76px; /* Define la altura del círculo */
+    border-radius: 50%; /* Convierte el elemento en círculo */
+    background-color: #dddddd; /* Coloca el círculo gris */
+    z-index: 0; /* Lo coloca detrás de la imagen */
+}
+
+main > div:nth-child(3) {
+    width: 100%; /* Ocupa todo el ancho */
+    min-height: 130px; /* Define la altura mínima */
+    background-color: #fafafa; /* Coloca un fondo gris muy claro */
+    display: flex; /* Activa Flexbox */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    gap: 250px; /* Separa los tres elementos */
+    border-top: 1px solid #f3f3f3; /* Agrega una línea superior */
+}
+
+main > div:nth-child(3) > div {
+    width: 120px; /* Define el ancho de cada elemento */
+    text-align: center; /* Centra el texto */
+}
+
+main > div:nth-child(3) > div > p:first-child {
+    width: 43px; /* Define el ancho del círculo */
+    height: 43px; /* Define la altura del círculo */
+    margin: 0 auto 10px auto; /* Centra y separa el círculo */
+    background-color: var(--dorado); /* Coloca el fondo dorado */
+    border-radius: 50%; /* Convierte el fondo en círculo */
+    display: flex; /* Activa Flexbox */
+    align-items: center; /* Centra el icono verticalmente */
+    justify-content: center; /* Centra el icono horizontalmente */
+    font-size: 19px; /* Define el tamaño del icono */
+}
+
+main > div:nth-child(3) > div > p:nth-child(2) {
+    margin: 0; /* Elimina el margen */
+    color: #1d2430; /* Define el color del texto */
+    font-size: 13px; /* Define el tamaño del texto */
+    letter-spacing: 4px; /* Separa las letras */
+}
+
+main > div:nth-child(3) > div > p:last-child {
+    margin: 15px auto 0 auto; /* Separa la línea del texto */
+    color: var(--dorado); /* Coloca la línea en dorado */
+    font-size: 18px; /* Define el tamaño */
+    line-height: 1; /* Reduce el espacio vertical */
+}
+
+footer {
+    min-height: 94px; /* Define la altura mínima del footer */
+    background-color: var(--dorado); /* Coloca el fondo dorado */
+    color: white; /* Coloca el texto en blanco */
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Organiza el contenido verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    text-align: center; /* Centra el texto */
+    padding: 15px 30px; /* Agrega espacio interno */
+}
+
+footer p {
+    margin: 0; /* Elimina el margen */
+    font-size: 11px; /* Define el tamaño del texto */
+    line-height: 1.5; /* Separa las líneas */
+}
+
+@media (max-width: 900px) {
+    header {
+        padding: 0 15px; /* Reduce el espacio del header */
+    }
+
+    header > div:nth-child(3) {
+        display: none; /* Oculta el menú en pantallas pequeñas */
+    }
+
+    main > div:nth-child(1) {
+        padding: 50px 30px; /* Reduce el espacio del contenido */
+    }
+
+    main > div:nth-child(1) > p:last-child {
+        width: 45%; /* Reduce el ancho del texto */
+    }
+
+    main > div:nth-child(2) {
+        right: 0; /* Acerca la imagen al borde derecho */
+    }
+
+    main > div:nth-child(3) {
+        gap: 80px; /* Reduce la separación de los accesos */
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        height: auto; /* Permite que el header se adapte */
+        min-height: 60px; /* Define una altura mínima */
+        padding: 5px 15px; /* Reduce el espacio interno */
+    }
+
+    .logo-header img {
+        width: 40px; /* Reduce el ancho del logo */
+        height: 40px; /* Reduce la altura del logo */
+    }
+
+    .titulo-logo h2 {
+        font-size: 15px; /* Reduce el tamaño del nombre */
+    }
+
+    .titulo-logo h3 {
+        font-size: 8px; /* Reduce el tamaño del subtítulo */
+    }
+
+    header > div:nth-child(3) {
+        display: none; /* Oculta el menú en celulares */
+    }
+
+    main {
+        display: block; /* Cambia la distribución principal */
+    }
+
+    main > div:nth-child(1) {
+        min-height: auto; /* Elimina la altura mínima */
+        padding: 50px 25px 20px 25px; /* Ajusta los espacios */
+        text-align: center; /* Centra el texto */
+        align-items: center; /* Centra los elementos */
+    }
+
+    main h1 {
+        font-size: 29px; /* Reduce el tamaño del título */
+    }
+
+    main > div:nth-child(1) > p:last-child {
+        width: 100%; /* Permite que el texto ocupe todo el ancho */
+    }
+
+    main > div:nth-child(2) {
+        position: relative; /* Cambia la posición de la imagen */
+        top: auto; /* Restablece la posición superior */
+        right: auto; /* Restablece la posición derecha */
+        width: 100%; /* Ocupa todo el ancho */
+        height: 280px; /* Define la altura */
+    }
+
+    main > div:nth-child(2) img {
+        width: 300px; /* Reduce el ancho de la imagen */
+        height: 250px; /* Reduce la altura de la imagen */
+    }
+
+    main > div:nth-child(3) {
+        min-height: auto; /* Permite adaptar la altura */
+        padding: 30px 10px; /* Reduce el espacio */
+        gap: 20px; /* Reduce la separación */
+    }
+
+    main > div:nth-child(3) > div {
+        width: 100px; /* Reduce el ancho de cada acceso */
+    }
+
+    main > div:nth-child(3) > div > p:nth-child(2) {
+        font-size: 10px; /* Reduce el texto */
+        letter-spacing: 2px; /* Reduce la separación de letras */
+    }
+
+    footer {
+        min-height: 110px; /* Aumenta la altura del footer */
+    }
+
+    footer p {
+        font-size: 9px; /* Reduce el texto del footer */
+    }
+}

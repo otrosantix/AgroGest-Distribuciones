@@ -199,16 +199,20 @@ main > div:nth-child(3) {
     min-height: 130px; /* Define la altura mínima */
     background-color: #fafafa; /* Coloca un fondo gris muy claro */
     display: flex; /* Activa Flexbox */
-    justify-content: center; /* Centra los elementos horizontalmente */
+    justify-content: space-evenly; /* Distribuye los elementos uniformemente */
     align-items: center; /* Centra los elementos verticalmente */
-    gap: 250px; /* Separa los tres elementos */
+    padding: 0 20px; /* Un poco de espacio a los lados */
     border-top: 1px solid #f3f3f3; /* Agrega una línea superior */
 }
 
 main > div:nth-child(3) > div {
-    width: 120px; /* Define el ancho de cada elemento */
-    text-align: center; /* Centra el texto */
+        width: 150px; /* Aumentamos el ancho para que quepan las palabras */
+        text-align: center; /* Centra el texto */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 }
+
 
 main > div:nth-child(3) > div > p:first-child {
     width: 43px; /* Define el ancho del círculo */
@@ -223,10 +227,11 @@ main > div:nth-child(3) > div > p:first-child {
 }
 
 main > div:nth-child(3) > div > p:nth-child(2) {
-    margin: 0; /* Elimina el margen */
+     margin: 0; /* Elimina el margen */
     color: #1d2430; /* Define el color del texto */
     font-size: 13px; /* Define el tamaño del texto */
-    letter-spacing: 4px; /* Separa las letras */
+    letter-spacing: 3px; /* Reducimos un poco el espacio entre letras */
+    white-space: nowrap; /* Evita que el texto salte a la siguiente línea */
 }
 
 main > div:nth-child(3) > div > p:last-child {
